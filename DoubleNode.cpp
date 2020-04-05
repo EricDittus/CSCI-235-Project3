@@ -8,7 +8,7 @@ DoubleNode<ItemType>::DoubleNode(const ItemType &one_item) : item(one_item), nex
 
 template <typename ItemType>
 DoubleNode<ItemType>::DoubleNode(const ItemType &one_item, DoubleNode<ItemType> *nextNode, DoubleNode<ItemType> *previousNode)
-    : Item(one_item), next(nextNode), previous(previousNode) {}
+    : item(one_item), next(nextNode), previous(previousNode) {}
 
 template <typename ItemType>
 void DoubleNode<ItemType>::setItem(const ItemType& one_item){
