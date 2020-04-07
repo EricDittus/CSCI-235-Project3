@@ -151,6 +151,7 @@ void DoublyLinkedList<ItemType>::display() const
     //Now on to the next node
     rater = rater -> getNextNode();
   }
+  std::cout<< "\n";
 }
 
 template <typename ItemType>
@@ -169,6 +170,7 @@ void DoublyLinkedList<ItemType>::displayBackwards() const
     }
     rater = rater -> getPrevNode();
   }
+  std::cout << "\n";
 }
 
 
