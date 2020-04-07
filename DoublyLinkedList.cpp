@@ -103,7 +103,7 @@ bool DoublyLinkedList<ItemType>::remove(const int &position)
 
 
 template <typename ItemType>
-DoublyLinkedList<ItemType>::DoubleNode<ItemType> *getAtPos(const int& position) const
+DoubleNode<ItemType>* DoublyLinkedList<ItemType>::getAtPos(const int& position) const
 {
   if(position < 1 || position > itCount){
     return nullptr;
