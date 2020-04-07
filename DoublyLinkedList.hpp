@@ -24,7 +24,7 @@ public:
     void display() const; //this will display the content of the list in the order it's in
     void displayBackwards() const; //this displays it backwards
     int getSize() const;
-    DoublyLinkedList<ItemType> interleave(const DoublyLinkedList<ItemType>& a_list);
+    DoublyLinkedList<ItemType>& interleave(const DoublyLinkedList<ItemType>& a_list);
     //This will alter the calling list to be interleaved list of the original and parameter list
     DoubleNode<ItemType> *getHeadPtr() const;
 };

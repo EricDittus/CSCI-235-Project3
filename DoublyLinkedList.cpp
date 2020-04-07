@@ -88,7 +88,7 @@ bool DoublyLinkedList<ItemType>::remove(const int &position)
         sub = rater -> getNextNode();
         if(rater -> getNextNode() -> getNextNode() != nullptr){
           rater -> getNextNode() -> getNextNode() -> setPrevNode(rater);
-          rater -> setNextNode(rater -> setNextNode() -> getNextNode());
+          rater -> setNextNode(rater -> getNextNode() -> getNextNode());
         }else{
           rater -> setNextNode(nullptr);
         }
