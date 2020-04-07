@@ -5,6 +5,14 @@
 #include <iostream>
 
 
+//***********************************************//
+//Part 2: Define a class DoublyLinkedList that
+//is a demonstration of the Doubly-Linked List
+//concept discussed in class. It should contain
+//a head pointer to a DoubleNode of any arbitrary
+//type ItemType, and it should contain a member
+//that keeps track of its size.
+//***********************************************//
 template<typename ItemType>
 class DoublyLinkedList
 {

@@ -5,6 +5,9 @@
 #include "DoubleNode.hpp"
 
 
+//***********************************************//
+//Part 2: 1. Default Constructor
+//***********************************************//
 template <typename ItemType>
 DoublyLinkedList<ItemType>::DoublyLinkedList()
 {
@@ -13,39 +16,19 @@ DoublyLinkedList<ItemType>::DoublyLinkedList()
   itCount = 0;
 }
 
+//***********************************************//
+//Part 2: 2. Copy Constructor
+//***********************************************//
 template <typename ItemType>
 DoublyLinkedList<ItemType>::DoublyLinkedList(const DoublyLinkedList& copy)
 {
-//this will copy each node
-//I must create a pointer that iterated using a loop through the list
-itCount = copy.itCount;
-   DoubleNode<ItemType>* origPtr = copy.headPtr;
-
-   if (origPtr == nullptr)
-   {
-      headPtr = nullptr;
-   } else {
-      headPtr = new DoubleNode<ItemType>();
-      headPtr->setItem(origPtr->getItem());
-      DoubleNode<ItemType>* newPtr = headPtr;
-      DoubleNode<ItemType>* backendPtr = headPtr;
-      origPtr = origPtr->getNextNode();
-
-      while (origPtr != nullptr)
-      {
-         ItemType nextItem = origPtr->getItem();
-         DoubleNode<ItemType>* newPtr = new DoubleNode<ItemType>(nextItem);
-         newPtr->setNextNode(newPtr);
-         newPtr = newPtr->getNextNode();
-         newPtr->setPrevNode(backendPtr);
-         backendPtr = backendPtr->getNextNode();
-         origPtr = origPtr->getNextNode();
-      }
-
-      newPtr->setNextNode(nullptr);
-   }
- }
-
+  DoubleNode<ItemType>* rater = copy.headPtr;
+  for(int i = 1; i <= copy.itCount; i++){
+    ItemType data = rater -> getItem();
+    this -> insert(data,i);
+    rater = rater -> getNextNode();
+  }
+}
 
 template <typename ItemType>
 DoublyLinkedList<ItemType>::~DoublyLinkedList()
@@ -55,6 +38,13 @@ DoublyLinkedList<ItemType>::~DoublyLinkedList()
 }//end destructor
 
 
+//***********************************************//
+//Part 2: 3. bool insert(const int& position,
+// ItemType item), which is intended to insert
+//item at index position in your list
+//Note: Let the list be 1 indexed unlike arrays,
+//which are 0 indexed.
+//***********************************************//
 template <typename ItemType>
 bool DoublyLinkedList<ItemType>::insert(ItemType item, const int& position)
 {
@@ -88,6 +78,11 @@ bool DoublyLinkedList<ItemType>::insert(ItemType item, const int& position)
   }
 }
 
+//***********************************************//
+//Part 2: 4. bool remove(const int& position),
+//which is intended to remove the node at index
+//position
+//***********************************************//
 template <typename ItemType>
 bool DoublyLinkedList<ItemType>::remove(const int& position)
 {
@@ -121,7 +116,11 @@ bool DoublyLinkedList<ItemType>::remove(const int& position)
 }
 
 
-
+//***********************************************//
+//Part 2: 5. DoubleNode<itemType> getAtPos
+//(const int& position) const, which returns
+//the node at position
+//***********************************************//
 template <typename ItemType>
 DoubleNode<ItemType>* DoublyLinkedList<ItemType>::getAtPos(const int& position) const
 {
@@ -136,13 +135,19 @@ DoubleNode<ItemType>* DoublyLinkedList<ItemType>::getAtPos(const int& position) 
   }
 }
 
-
+//***********************************************//
+//Part 2: 6. bool isEmpty() const, which returns
+//whether the list is empty
+//***********************************************//
 template <typename ItemType>
 bool DoublyLinkedList<ItemType>::isEmpty() const
 {
-return itCount == 0;
+  return itCount == 0;
 }
 
+//***********************************************//
+//Part 2: 7. void clear(), which clears the list
+//***********************************************//
 template <typename ItemType>
 void DoublyLinkedList<ItemType>::clear()
 {
@@ -157,6 +162,10 @@ void DoublyLinkedList<ItemType>::clear()
   delete sub;
 }
 
+//***********************************************//
+//Part 2: 8. void display() const, which prints
+//the contents of the list in order
+//***********************************************//
 template <typename ItemType>
 void DoublyLinkedList<ItemType>::display() const
 {
@@ -174,6 +183,11 @@ void DoublyLinkedList<ItemType>::display() const
   std::cout<< "\n";
 }
 
+//***********************************************//
+//Part 2: 9. void displayBackwards() const,
+//which prints the contents of the list
+//backwards.
+//***********************************************//
 template <typename ItemType>
 void DoublyLinkedList<ItemType>::displayBackwards() const
 {
@@ -193,7 +207,12 @@ void DoublyLinkedList<ItemType>::displayBackwards() const
   std::cout << "\n";
 }
 
-
+//***********************************************//
+//Part 2: 10. DoublyLinkedList<itemType>
+//interleave(const DoublyLinkedList<itemType>& a list),
+//which alters the calling list to be the interleaved
+//list of the original and parameter lists
+//***********************************************//
 template <typename ItemType>
 DoublyLinkedList<ItemType>& DoublyLinkedList<ItemType>::interleave(const DoublyLinkedList<ItemType>& a_list)
 {

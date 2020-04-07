@@ -2,6 +2,14 @@
 #define _DOUBLE_NODE_H_
 
 
+//***********************************************//
+//Part 1: Define a class DoubleNode that is
+//capable of holding an item of any arbitrary
+//type ItemType. As a node of a Doubly-Linked
+//list, it should additionally contain two pointers
+//that respectively point to other objects of type
+//DoubleNode.
+//***********************************************//
 template<typename ItemType>
 class DoubleNode {
 
