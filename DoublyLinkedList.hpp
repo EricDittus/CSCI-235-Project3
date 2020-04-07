@@ -18,7 +18,7 @@ public:
     virtual ~DoublyLinkedList(); //the destructor
     bool insert(ItemType item,const int& position); //this will insert item at the position
     bool remove(const int& position); //this will remove the node at the indexed position
-    DoubleNode<ItemType> *getAtPos(const int& position) const; //returns the node that is at that position
+    DoubleNode<ItemType>* getAtPos(const int& position) const; //returns the node that is at that position
     bool isEmpty() const; //says if list is empty or not
     void clear(); //this will clear the list
     void display() const; //this will display the content of the list in the order it's in
