@@ -182,7 +182,7 @@ DoublyLinkedList<ItemType>& DoublyLinkedList<ItemType>::interleave(const DoublyL
   DoubleNode<ItemType>* rater_two = a_list.headPtr;
   while(!(rater_one == nullptr && rater_two == nullptr)){
     if(rater_one != nullptr){
-      return_list -> insert(location, rater_one -> getItem());
+      return_list -> insert(rater_one -> getItem(),location);
       rater_one = rater_one -> getNextNode();
       location ++;
     }
