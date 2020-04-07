@@ -1,5 +1,5 @@
-#ifndef _DoubleNode
-#define _DoubleNode
+#ifndef _DOUBLE_NODE_H_
+#define _DOUBLE_NODE_H_
 
 template<class ItemType>
 class DoubleNode {
@@ -12,19 +12,19 @@ public:
     //Default constructor
     DoubleNode();
     //Parameterized constructors
-    DoubleNode(const ItemType& one_item);
-    DoubleNode(const ItemType& one_item, DoubleNode<ItemType>* nextNode, DoubleNode<ItemType>* previousNode);
+    DoubleNode(ItemType one_item);
+
     //Sets item within DoubleNode
-    void setItem(const ItemType& one_item);
+    void setItem(ItemType one_item);
     //Sets the next node of the DoubleNode
-    void setNextNode(DoubleNode<ItemType>* nextNode);
+    void setNextNode(DoubleNode<ItemType>* next);
     //Sets the previous node of the DoubleNode
-    void setPrevNode(DoubleNode<ItemType>* previousNode);
+    void setPrevNode(DoubleNode<ItemType>* previous);
     ItemType getItem() const;
     DoubleNode<ItemType>* getNextNode() const;
     DoubleNode<ItemType>* getPrevNode() const;
 
 }; //end DoubleNode
 
-#include "DoubleNode.cpp"
+
 #endif
