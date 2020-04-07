@@ -20,8 +20,8 @@ DoublyLinkedList<ItemType>::DoublyLinkedList(const DoublyLinkedList& copy)
 //I must create a pointer that iterated using a loop through the list
   DoubleNode<ItemType>* rater = copy.headPtr;
   for(int i = 1; i <= copy.itCount; i++){
-    ItemType item = rater -> getItem();
-    this -> insert(item,i);
+    ItemType data = rater -> getItem();
+    this -> insert(data,i);
     rater = rater -> getNextNode();
   }
 }
@@ -69,7 +69,7 @@ bool DoublyLinkedList<ItemType>::insert(ItemType item, const int& position)
 }
 
 template <typename ItemType>
-bool DoublyLinkedList<ItemType>::remove(const int &position)
+bool DoublyLinkedList<ItemType>::remove(const int& position)
 {
   if(position < 1 || position > itCount){
     return false;
