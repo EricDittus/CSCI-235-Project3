@@ -18,8 +18,8 @@ DoublyLinkedList<ItemType>::DoublyLinkedList(const DoublyLinkedList& copy)
 {
 //this will copy each node
 //I must create a pointer that iterated using a loop through the list
-itCount = DoubleList.itemCount;
-   DoubleNode<ItemType>* origPtr = DoubleList.headPtr;
+itCount = copy.itCount;
+   DoubleNode<ItemType>* origPtr = copy.headPtr;
 
    if (origPtr == nullptr)
    {
