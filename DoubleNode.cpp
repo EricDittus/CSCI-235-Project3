@@ -1,4 +1,4 @@
-#indef DOUBLENODE_C_
+#ifndef DOUBLENODE_C_
 #define DOUBLENODE_C_
 
 #include "DoubleNode.hpp"
