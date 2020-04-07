@@ -43,6 +43,7 @@ ItemType DoubleNode<ItemType>::getItem(){
     return item;
 }
 
+
 template <typename ItemType>
 DoubleNode<ItemType>* DoubleNode<ItemType>::getNextNode() const{
     return next;
@@ -52,3 +53,5 @@ template <typename ItemType>
 DoubleNode<ItemType>* DoubleNode<ItemType>::getPrevNode() const{
     return previous;
 }
+
+#endif

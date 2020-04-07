@@ -23,6 +23,7 @@ public:
     void clear(); //this will clear the list
     void display() const; //this will display the content of the list in the order it's in
     void displayBackwards() const; //this displays it backwards
+    ItemType getSize() const;
     DoublyLinkedList<ItemType> interleave(const DoublyLinkedList<ItemType>& a_list);
     //This will alter the calling list to be interleaved list of the original and parameter list
 };

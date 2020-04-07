@@ -193,4 +193,9 @@ DoublyLinkedList<ItemType>::DoublyLinkedList<ItemType> interleave(const DoublyLi
   }
   return *return_list;
 }
+
+template <typename ItemType>
+ItemType DoubleNode<ItemType>::getSize(){
+    return itCount;
+}
 #endif
