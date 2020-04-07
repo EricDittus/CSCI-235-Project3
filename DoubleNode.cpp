@@ -22,7 +22,7 @@ DoubleNode<ItemType>::DoubleNode(ItemType one_item)
 
 
 template <typename ItemType>
-void DoubleNode<ItemType>::setItem(const ItemType& one_item){
+void DoubleNode<ItemType>::setItem(ItemType one_item){
     this->item = one_item;
 }
 

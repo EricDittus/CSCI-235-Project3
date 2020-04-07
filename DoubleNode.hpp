@@ -20,7 +20,7 @@ public:
     void setNextNode(DoubleNode<ItemType>* next);
     //Sets the previous node of the DoubleNode
     void setPrevNode(DoubleNode<ItemType>* previous);
-    ItemType getItem() const;
+    ItemType getItem();
     DoubleNode<ItemType>* getNextNode() const;
     DoubleNode<ItemType>* getPrevNode() const;
 
