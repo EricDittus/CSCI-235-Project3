@@ -2,8 +2,6 @@
 #define _DOUBLY_LINKED_LIST_H
 
 #include "DoubleNode.cpp"
-#include "DoublyLinkedList.cpp"
-#include "DoubleNode.cpp"
 #include <iostream>
 
 

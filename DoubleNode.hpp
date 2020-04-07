@@ -1,8 +1,8 @@
 #ifndef _DOUBLE_NODE_H_
 #define _DOUBLE_NODE_H_
-#include "DoubleNode.cpp"
 
-template<class ItemType>
+
+template<typename ItemType>
 class DoubleNode {
 
 private:
