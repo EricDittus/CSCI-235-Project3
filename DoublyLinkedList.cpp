@@ -39,7 +39,7 @@ template <typename ItemType>
 bool DoublyLinkedList<ItemType>::insert(ItemType item, const int& position)
 {
   //I must first be sure position is correct
-  if(position <1 || position > size + 1){
+  if(position <1 || position > itCount + 1){
     return false;
   }else{
     DoubleNode<ItemType>* node = new DoubleNode<ItemType>(item);
@@ -64,7 +64,7 @@ bool DoublyLinkedList<ItemType>::insert(ItemType item, const int& position)
       node -> setPrevNode(rater);
     }
     itCount++;
-    return true
+    return true;
   }
 }
 
@@ -72,7 +72,7 @@ template <typename ItemType>
 bool DoublyLinkedList<ItemType>::remove(const int &position)
 {
   if(position < 1 || position > itCount){
-    return false
+    return false;
   }else{
     DoubleNode<ItemType>* sub;
     if(position == 1){
@@ -90,7 +90,7 @@ bool DoublyLinkedList<ItemType>::remove(const int &position)
           rater -> getNextNode() -> getNextNode() -> setPrevNode(rater);
           rater -> setNextNode(rater -> setNextNode() -> getNextNode());
         }else{
-          rater -> setNextNode(nullptr)
+          rater -> setNextNode(nullptr);
         }
         delete sub;
       }
@@ -105,7 +105,7 @@ bool DoublyLinkedList<ItemType>::remove(const int &position)
 template <typename ItemType>
 DoublyLinkedList<ItemType>::DoubleNode<ItemType> *getAtPos(const int& position) const
 {
-  if(position < 1 || position > size){
+  if(position < 1 || position > itCount){
     return nullptr;
   }else{
     DoubleNode<ItemType>* rater = headPtr;
