@@ -35,7 +35,7 @@ DoublyLinkedList<ItemType>::~DoublyLinkedList()
 
 
 template <typename ItemType>
-bool DoublyLinkedList<ItemType>::insert(const int& position, ItemType item)
+bool DoublyLinkedList<ItemType>::insert(ItemType item, const int& position)
 {
   //I must first be sure position is correct
   if(position <1 || position > size + 1){

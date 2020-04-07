@@ -16,7 +16,7 @@ public:
     DoublyLinkedList(); //This is the default constructor
     DoublyLinkedList(const DoublyLinkedList& copy); //copying the constructor
     virtual ~DoublyLinkedList(); //the destructor
-    bool insert(const int& position, ItemType item); //this will insert item at the position
+    bool insert(ItemType item,const int& position); //this will insert item at the position
     bool remove(const int& position); //this will remove the node at the indexed position
     DoubleNode<ItemType> *getAtPos(const int& position) const; //returns the node that is at that position
     bool isEmpty() const; //says if list is empty or not
