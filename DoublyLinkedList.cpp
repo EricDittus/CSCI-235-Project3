@@ -173,7 +173,7 @@ void DoublyLinkedList<ItemType>::displayBackwards() const
 
 
 template <typename ItemType>
-DoublyLinkedList<ItemType>::DoublyLinkedList<ItemType> interleave(const DoublyLinkedList<ItemType>& a_list)
+DoublyLinkedList<ItemType>& DoublyLinkedList<ItemType>::interleave(const DoublyLinkedList<ItemType>& a_list)
 {
   //I need to first make a list to return
   DoublyLinkedList<ItemType>* return_list = new DoublyLinkedList();
@@ -202,7 +202,7 @@ int DoublyLinkedList<ItemType>::getSize() const
 }
 
 template <typename ItemType>
-DoublyLinkedList<ItemType>::DoubleNode<ItemType> *getHeadPtr() const
+DoubleNode<ItemType>* DoublyLinkedList<ItemType>::getHeadPtr() const
 {
   return headPtr;
 }
