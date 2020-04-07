@@ -3,6 +3,7 @@
 
 #include "DoubleNode.hpp"
 
+
 template<typename ItemType>
 class DoublyLinkedList
 {

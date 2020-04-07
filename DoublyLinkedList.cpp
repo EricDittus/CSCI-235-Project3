@@ -40,7 +40,7 @@ DoublyLinkedList<ItemType>::DoublyLinkedList(const DoublyLinkedList<ItemType> &d
         //this is for the last node
         DoubleNode<itemType> fresh_Node= new DoubleNode<ItemType>;
         fresh_Node->setItem(chainFindPtr->getItem());
-        navigatePtr>setItem(fresh_Node);
+        navigatePtr->setItem(fresh_Node);
         fresh_Node->setPrevNode(navigatePtr);
         fresh_Node->setNextNode(nullptr);
     }

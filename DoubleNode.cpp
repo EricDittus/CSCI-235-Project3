@@ -1,4 +1,7 @@
 #include "DoubleNode.hpp"
+#include <cstddef>
+#include <iostream>
+#include <stdlib.h>
 
 template <typename ItemType>
 DoubleNode<ItemType>::DoubleNode() : next(nullptr), previous(nullptr) {}
