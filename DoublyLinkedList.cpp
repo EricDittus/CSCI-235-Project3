@@ -1,4 +1,8 @@
 #include "DoublyLinkedList.hpp"
+#include "DoubleNode.hpp"
+#include <cstddef>
+#include <iostream>
+#include <stdlib.h>
 
 template <typename ItemType>
 DoublyLinkedList<ItemType>::DoublyLinkedList() : headPtr(nullptr), tailPtr(nullptr), itCount(0) {}
