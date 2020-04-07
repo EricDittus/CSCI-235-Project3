@@ -27,5 +27,5 @@ public:
 
 }; //end DoubleNode
 
-
+#include "DoubleNode.cpp"
 #endif

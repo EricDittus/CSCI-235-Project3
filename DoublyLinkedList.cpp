@@ -2,6 +2,7 @@
 #define _DOUBLY_LINKED_LIST_
 
 #include "DoublyLinkedList.hpp"
+#include "DoubleNode.hpp"
 
 
 template <typename ItemType>

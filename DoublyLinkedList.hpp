@@ -28,5 +28,5 @@ public:
     //This will alter the calling list to be interleaved list of the original and parameter list
     DoubleNode<ItemType> *getHeadPtr() const;
 };
-
+#include "DoublyLinkedList.cpp"
 #endif
