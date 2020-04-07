@@ -1,5 +1,6 @@
 #ifndef _DOUBLE_NODE_H_
 #define _DOUBLE_NODE_H_
+#include "DoubleNode.cpp"
 
 template<class ItemType>
 class DoubleNode {
