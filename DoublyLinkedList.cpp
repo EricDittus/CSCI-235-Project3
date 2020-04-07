@@ -18,13 +18,33 @@ DoublyLinkedList<ItemType>::DoublyLinkedList(const DoublyLinkedList& copy)
 {
 //this will copy each node
 //I must create a pointer that iterated using a loop through the list
-  DoubleNode<ItemType>* rater = copy.headPtr;
-  for(int i = 1; i <= copy.itCount; i++){
-    ItemType data = rater -> getItem();
-    this -> insert(data,i);
-    rater = rater -> getNextNode();
-  }
-}
+itCount = DoubleList.itemCount;
+   DoubleNode<ItemType>* origPtr = DoubleList.headPtr;
+
+   if (origPtr == nullptr)
+   {
+      headPtr = nullptr;
+   } else {
+      headPtr = new DoubleNode<ItemType>();
+      headPtr->setItem(origPtr->getItem());
+      DoubleNode<ItemType>* newPtr = headPtr;
+      DoubleNode<ItemType>* backendPtr = headPtr;
+      origPtr = origPtr->getNextNode();
+
+      while (origPtr != nullptr)
+      {
+         ItemType nextItem = origPtr->getItem();
+         DoubleNode<ItemType>* newPtr = new DoubleNode<ItemType>(nextItem);
+         newPtr->setNextNode(newPtr);
+         newPtr = newPtr->getNextNode();
+         newPtr->setPrevNode(backendPtr);
+         backendPtr = backendPtr->getNextNode();
+         origPtr = origPtr->getNextNode();
+      }
+
+      newPtr->setNextNode(nullptr);
+   }
+ }
 
 
 template <typename ItemType>
