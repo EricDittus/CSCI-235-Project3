@@ -21,7 +21,7 @@ DoublyLinkedList<ItemType>::DoublyLinkedList(const DoublyLinkedList& copy)
   DoubleNode<ItemType>* rater = copy.headPtr;
   for(int i = 1; i <= copy.itCount; i++){
     ItemType item = rater -> getItem();
-    this -> insert(i,item);
+    this -> insert(item,i);
     rater = rater -> getNextNode();
   }
 }
@@ -187,7 +187,7 @@ DoublyLinkedList<ItemType>& DoublyLinkedList<ItemType>::interleave(const DoublyL
       location ++;
     }
     if(rater_two != nullptr){
-      return_list -> insert(location, rater_two -> getItem());
+      return_list -> insert(rater_two -> getItem(),location);
       rater_two = rater_two -> getNextNode();
       location++;
     }
