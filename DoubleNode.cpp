@@ -14,18 +14,16 @@ DoubleNode<ItemType>::DoubleNode()
 template <typename ItemType>
 DoubleNode<ItemType>::DoubleNode(ItemType one_item)
 {
-item = one_item;
-next = nullptr;
-previous = nullptr;
+  item = one_item;
+  next = nullptr;
+  previous = nullptr;
 }
 
-template <typename ItemType>
-DoubleNode<ItemType>::DoubleNode(const ItemType &one_item, DoubleNode<ItemType> *nextNode, DoubleNode<ItemType> *previousNode)
-    : item(one_item), next(nextNode), previous(previousNode) {}
+
 
 template <typename ItemType>
 void DoubleNode<ItemType>::setItem(const ItemType& one_item){
-    this->data = one_item;
+    this->item = one_item;
 }
 
 template <typename ItemType>

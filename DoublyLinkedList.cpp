@@ -195,7 +195,14 @@ DoublyLinkedList<ItemType>::DoublyLinkedList<ItemType> interleave(const DoublyLi
 }
 
 template <typename ItemType>
-ItemType DoubleNode<ItemType>::getSize(){
+int DoublyLinkedList<ItemType>::getSize() const
+{
     return itCount;
+}
+
+template <typename ItemType>
+DoublyLinkedList<ItemType>::DoubleNode<ItemType> *getHeadPtr() const
+{
+  return headPtr;
 }
 #endif
